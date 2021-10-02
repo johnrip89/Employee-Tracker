@@ -1,6 +1,6 @@
 const db = require('./db/connection');
 const inquirer = require('inquirer');
-const cTable = require('console.table');
+require('console.table');
 
 const roleArray = ['CS Representative', 'CS Team Lead', 'Accountant', 'Lead Accountant', 'Salesperson', 'Sales Lead', 'Software Engineer', 'Engineer Team Lead'];
 const managerArray = ['Bob', 'George', 'Frank', 'Sammie'];
@@ -287,7 +287,6 @@ const updateEmployee = () => {
         })
     });
 };
-
 
 db.connect(err => {
     if (err) throw err;
