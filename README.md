@@ -28,6 +28,8 @@
   ## Demo
 
   ![demo](assets/employee_tracker_screenshot.png) 
+  
+  https://watch.screencastify.com/v/Y5NOioUGWgMHXn2WB5Ug
 
 
   ## Usage
