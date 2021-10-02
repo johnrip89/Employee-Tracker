@@ -273,9 +273,11 @@ const updateEmployee = () => {
                 message: "What's the job title of the new Employee?",
                 choices: ['CS Representative', 'Accountant', 'Salesperson', 'Software Engineer']
             }
-        ]).then((answer) => {                        
+        ]).then((answer) => {
+            console.log(answer); 
+            const employeeNames = answer.employeeName.split(' ');           
             const roleID = roleArray.indexOf(answer.newRole) + 1;
-            const sql = `UPDATE employees SET role_id = ${roleID}, manager_id =  WHERE employees.id = ${employeeNames[2]}`;                   
+            const sql = `UPDATE employees SET role_id = ${roleID} WHERE employees.id = ${employeeNames[2]}`;                   
 
             db.query(sql, (err) => {
                 if (err) {
@@ -287,6 +289,7 @@ const updateEmployee = () => {
         })
     });
 };
+
 
 db.connect(err => {
     if (err) throw err;
